@@ -75,7 +75,7 @@ L<http://search.cpan.org/dist/Medical-ICD10/>
 
 =head1 LICENSE AND COPYRIGHT
 
-Copyright 2010 Spiros Denaxas.
+Copyright 2011 Spiros Denaxas.
 
 This program is free software; you can redistribute it and/or modify it
 under the terms of either: the GNU General Public License as published
