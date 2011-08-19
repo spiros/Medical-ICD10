@@ -2,40 +2,7 @@ use strict;
 use warnings;
 
 use Test::More tests => 18;
-use File::Temp qw/ tempfile tempdir /;
 use Test::Deep;
-
-###################################################################
-
-my $tempdir = tempdir( CLEANUP => 1 );
-my ( $fh, $filename ) = tempfile( DIR => $tempdir );
-
-open $fh, ">", $filename;
-print $fh <<"END"
-AAA\tThis is term AAA
-AAA1\tThis is term AAA1
-AAA2\tThis is term AAA2
-AAA3\tThis is term AAA3
-AAA4\tThis is term AAA4
-AAA5\tThis is term AAA5
-AAA20\tThis is term AAA20
-AAA22\tThis is term AAA22
-AAA50\tThis is term AAA50
-AAA40\tThis is term AAA40
-AAA42\tThis is term AAA42
-CCV\tThis is term CCV
-CCV1\tThis is term CCV1
-CCV2\tThis is term CCV2
-CCV3\tThis is term CCV3
-CCV4\tThis is term CCV4
-CCV5\tThis is term CCV5
-CCV50\tThis is term CCV50
-CCV51\tThis is term CCV51
-CCV52\tThis is term CCV52
-CCV30\tThis is term CCV30
-END
-;
-close $fh;
 
 ###################################################################
 
@@ -46,7 +13,7 @@ my $MI = Medical::ICD10->new;
 isa_ok( $MI, "Medical::ICD10" );
 
 ok( 
-   $MI->parse( $filename ), 
+   $MI->parse( './t/testdata.tsv' ), 
    'parse() - ontology parsed OK' 
 );
 
