@@ -1,8 +1,6 @@
-
 use strict;
 use warnings;
 
-use Data::Dumper;
 use Test::More tests => 2;
 
 use_ok('Medical::ICD10::Graph');
