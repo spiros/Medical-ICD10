@@ -1,7 +1,7 @@
 use strict;
 use warnings;
 
-use Test::More tests => 18;
+use Test::More tests => 21;
 use Test::Deep;
 
 ###################################################################
@@ -125,6 +125,15 @@ foreach my $rh ( @$rah_tests ) {
       $rh->{text},      
       );
       
+   $parent_term =
+     $MI->get_parent_term_string( $rh->{term} );
+
+   is(
+        $parent_term,
+        $rh->{parent},
+        $rh->{text},      
+        );
+              
    my $ra_parent_terms = 
        $MI->get_parent_terms_string( $TermObject );
     

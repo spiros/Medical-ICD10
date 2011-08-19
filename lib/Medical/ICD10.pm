@@ -14,11 +14,11 @@ Medical::ICD10 - ICD10 Wrapper module
 
 =head1 VERSION
 
-Version 0.03
+Version 0.04
 
 =cut
 
-our $VERSION = '0.03';
+our $VERSION = '0.04';
 
 =head1 SYNOPSIS
 
@@ -223,6 +223,8 @@ sub get_parent_term {
    
    if ( ref $term && ref $term eq 'Medical::ICD10::Term' ) {
       $search_term = $term->term;
+   } else {
+       $search_term = $term;
    }
    
    return undef 
@@ -304,6 +306,8 @@ sub get_parent_terms {
    
    if ( ref $term && ref $term eq 'Medical::ICD10::Term' ) {
       $search_term = $term->term;
+   } else {
+       $search_term = $term;
    }
    
    return undef 
@@ -404,6 +408,8 @@ sub get_child_terms {
 
    if ( ref $term && ref $term eq 'Medical::ICD10::Term' ) {
      $search_term = $term->term;
+   } else {
+       $search_term = $term;
    }
    
    return undef 

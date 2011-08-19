@@ -5,3 +5,5 @@ Revision history for Medical-ICD10
 
 0.02    Added Test::Deep, File::Temp to Makefile PREQ's
 0.03    Added link to github, updated copyright date.
+0.04    Some changes to tests, fixed bug where terms were not 
+        correctly parsed.
