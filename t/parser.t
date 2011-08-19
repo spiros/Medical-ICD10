@@ -2,7 +2,6 @@
 use strict;
 use warnings;
 
-use Data::Dumper;
 use Test::More tests => 5;
 
 use_ok('Medical::ICD10::Parser');
