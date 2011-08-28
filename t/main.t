@@ -1,10 +1,17 @@
 use strict;
 use warnings;
 
-use Test::More tests => 21;
+use Test::More;
 use Test::Deep;
 
 ###################################################################
+
+my $filename = './t/testdata.tsv';
+
+if ( ! -e $filename ) {
+    plan 'skip_all' => 'Test data file could not be read';
+    done_testing();
+}
 
 use_ok('Medical::ICD10');
 
@@ -13,7 +20,7 @@ my $MI = Medical::ICD10->new;
 isa_ok( $MI, "Medical::ICD10" );
 
 ok( 
-   $MI->parse( './t/testdata.tsv' ), 
+   $MI->parse( $filename ), 
    'parse() - ontology parsed OK' 
 );
 
@@ -159,3 +166,5 @@ foreach my $rh ( @$rah_tests ) {
        );
    
 }
+
+done_testing();
