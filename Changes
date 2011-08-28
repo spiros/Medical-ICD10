@@ -7,3 +7,4 @@ Revision history for Medical-ICD10
 0.03    Added link to github, updated copyright date.
 0.04    Some changes to tests, fixed bug where terms were not 
         correctly parsed.
+0.5     Incrementing version by one to repush to CPAN.

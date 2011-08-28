@@ -14,11 +14,11 @@ Medical::ICD10 - ICD10 Wrapper module
 
 =head1 VERSION
 
-Version 0.04
+Version 0.05
 
 =cut
 
-our $VERSION = '0.04';
+our $VERSION = '0.05';
 
 =head1 SYNOPSIS
 
